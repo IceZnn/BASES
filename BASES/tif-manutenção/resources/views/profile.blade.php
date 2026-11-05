@@ -1,0 +1,4 @@
+@extends('layouts.app')
+@section('title','Meu Perfil | Manutenção Tatuí')
+@section('heading','Meu Perfil')
+@section('content')<div class="mb-4"><div class="eyebrow">Conta</div><h2 class="h3">Seus dados</h2><p class="text-secondary">Informações da conta autenticada.</p></div><div class="panel p-4" style="max-width:720px"><div class="row g-3"><div class="col-md-6"><small class="text-secondary d-block">Nome</small><strong>{{ auth()->user()->name }}</strong></div><div class="col-md-6"><small class="text-secondary d-block">E-mail</small><strong>{{ auth()->user()->email }}</strong></div><div class="col-md-6"><small class="text-secondary d-block">Telefone</small><strong>{{ auth()->user()->telefone ?: 'Não informado' }}</strong></div><div class="col-md-6"><small class="text-secondary d-block">Perfil</small><strong>{{ auth()->user()->tipo }}</strong></div></div></div>@endsection
